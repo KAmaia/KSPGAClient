@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CodeFile1.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="ConnectionManager.cs" />
     <Compile Include="Events\ConnectionStatusUpdateEventArgs.cs" />
     <Compile Include="Events\EventDelegates.cs" />
