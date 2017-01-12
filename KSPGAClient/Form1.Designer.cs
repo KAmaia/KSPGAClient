@@ -23,12 +23,60 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent( ) {
-			this.components = new System.ComponentModel.Container( );
+			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+			this.ts_TelnetStatus = new System.Windows.Forms.ToolStripStatusLabel();
+			this.statusStrip1.SuspendLayout();
+			this.SuspendLayout();
+			// 
+			// textBox1
+			// 
+			this.textBox1.Location = new System.Drawing.Point(12, 11);
+			this.textBox1.Multiline = true;
+			this.textBox1.Name = "textBox1";
+			this.textBox1.Size = new System.Drawing.Size(404, 386);
+			this.textBox1.TabIndex = 0;
+			// 
+			// statusStrip1
+			// 
+			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ts_TelnetStatus});
+			this.statusStrip1.Location = new System.Drawing.Point(0, 419);
+			this.statusStrip1.Name = "statusStrip1";
+			this.statusStrip1.Size = new System.Drawing.Size(624, 22);
+			this.statusStrip1.TabIndex = 1;
+			this.statusStrip1.Text = "statusStrip1";
+			// 
+			// ts_TelnetStatus
+			// 
+			this.ts_TelnetStatus.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter;
+			this.ts_TelnetStatus.Name = "ts_TelnetStatus";
+			this.ts_TelnetStatus.Size = new System.Drawing.Size(42, 17);
+			this.ts_TelnetStatus.Text = "Telnet:";
+			this.ts_TelnetStatus.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+			// 
+			// Form1
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(624, 441);
+			this.Controls.Add(this.statusStrip1);
+			this.Controls.Add(this.textBox1);
+			this.Name = "Form1";
 			this.Text = "Form1";
+			this.Load += new System.EventHandler(this.Form1_Load);
+			this.statusStrip1.ResumeLayout(false);
+			this.statusStrip1.PerformLayout();
+			this.ResumeLayout(false);
+			this.PerformLayout();
+
 		}
 
 		#endregion
+
+		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.StatusStrip statusStrip1;
+		private System.Windows.Forms.ToolStripStatusLabel ts_TelnetStatus;
 	}
 }
 
