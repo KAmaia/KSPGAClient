@@ -3,4 +3,10 @@
 		MASTERNODE,
 		TELNET
 	};
+	public enum CONNECTIONSTATUS {
+		CONNECTED,
+		DISCONNECTED,
+		TIMEOUT, 
+		NULL
+	};
 }
