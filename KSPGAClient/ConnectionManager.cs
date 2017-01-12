@@ -2,11 +2,13 @@
 using System.Net;
 
 using MinimalisticTelnet;
-using static KSPGAClient.Events.EventDelegates;
+using KSPGAClient.Events;
 
 namespace KSPGAClient {
 	internal class ConnectionManager {
-		public event ConnectionStatusUpdateHandler connectionStatusUpdateEvent;
+		public static event ConnectionStatusUpdateHandler connectionStatusUpdateEvent;
+		
+		
 		//handles creating a new connection to either the Master Node, or the KOS telnet server.  
 
 		private TelnetConnection tc;

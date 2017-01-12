@@ -44,7 +44,7 @@
 			// statusStrip1
 			// 
 			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ts_TelnetStatus});
+			this.ts_TelnetStatus});
 			this.statusStrip1.Location = new System.Drawing.Point(0, 419);
 			this.statusStrip1.Name = "statusStrip1";
 			this.statusStrip1.Size = new System.Drawing.Size(624, 22);
@@ -57,7 +57,6 @@
 			this.ts_TelnetStatus.Name = "ts_TelnetStatus";
 			this.ts_TelnetStatus.Size = new System.Drawing.Size(42, 17);
 			this.ts_TelnetStatus.Text = "Telnet:";
-			this.ts_TelnetStatus.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
 			// 
 			// gbx_controls
 			// 
