@@ -13,6 +13,8 @@ namespace KSPGAClient {
 		static void Main( ) {
 			Application.EnableVisualStyles( );
 			Application.SetCompatibleTextRenderingDefault( false );
+			ConnectionManager cm = new ConnectionManager();
+
 			Application.Run( new Form1() );
 		}
 	}
