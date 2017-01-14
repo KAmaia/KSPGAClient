@@ -3,32 +3,30 @@ using System.Net;
 
 using MinimalisticTelnet;
 using KSPGAClient.Events;
+using KSPGAClient.Events.NetworkEvents.TelNetEvents;
 
 namespace KSPGAClient {
 	public class ConnectionManager {
-		public event ConnectionStatusUpdateHandler connectionStatusUpdateEvent;
-		
-		
 		//handles creating a new connection to either the Master Node, or the KOS telnet server.  
+
+		public ConnectionManager( ) {
+			ExtEventManager.GetInstance( ).StartReceiving<TelnetLoginEvent>( @event => generateTelnetConn( @event ) );
+			
+		}
 
 		private TelnetConnection tc;
 
-		private TelnetConnection generateTelnetConn(string hostAddr, int port ) {
-			return new TelnetConnection( hostAddr, port );
+
+		private void generateTelnetConn( TelnetLoginEvent @event ) {
+			string connectionHostName = @event.Hostname;
+			int port = int.Parse(@event.Port);
+			string user = @event.User;
+			string password = @event.Password;
+			tc = new TelnetConnection( connectionHostName, port );
 		}
 
 
 
-		public void createConnection(CONNECTIONTYPE type,  string hostname, int port ) {
-			switch ( type ) {
-				case CONNECTIONTYPE.MASTERNODE:
-					break;
-				case CONNECTIONTYPE.TELNET:
-					//create telnet connection here.
-					tc = generateTelnetConn( hostname, port );
-					connectionStatusUpdateEvent( this, new Events.ConnectionStatusUpdateEventArgs( CONNECTIONSTATUS.CONNECTED ) );
-					break;
-			}
-		}
+		
 	}
 }

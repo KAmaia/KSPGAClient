@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KSPGAClient.Events {
-	interface iSubscriber {
-		void subscribe( EventArgs e );
+namespace KSPGAClient.Utils {
+	enum NETWORKTYPE {
+		TELNET,
+		COMMANDANDCONTROL,
+		OTHER
 	}
 }
