@@ -5,8 +5,8 @@ using MinimalisticTelnet;
 using KSPGAClient.Events;
 
 namespace KSPGAClient {
-	internal class ConnectionManager {
-		public static event ConnectionStatusUpdateHandler connectionStatusUpdateEvent;
+	public class ConnectionManager {
+		public event ConnectionStatusUpdateHandler connectionStatusUpdateEvent;
 		
 		
 		//handles creating a new connection to either the Master Node, or the KOS telnet server.  

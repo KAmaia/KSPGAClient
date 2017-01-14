@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace KSPGAClient.Events {
-	public class ConnectionStatusUpdateEventArgs {
+	public class ConnectionStatusUpdateEventArgs : EventArgs {
 		private CONNECTIONSTATUS status;
 		public ConnectionStatusUpdateEventArgs(CONNECTIONSTATUS _status ) {
 			status = _status;

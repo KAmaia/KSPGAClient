@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KSPGAClient.Events;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,8 +15,13 @@ namespace KSPGAClient {
 			Application.EnableVisualStyles( );
 			Application.SetCompatibleTextRenderingDefault( false );
 			ConnectionManager cm = new ConnectionManager();
+			Form1 MainForm = new Form1();
+			cm.connectionStatusUpdateEvent += new ConnectionStatusUpdateHandler( MainForm.updateConnStatus );
+			Application.Run( MainForm );
+		}
 
-			Application.Run( new Form1() );
+		private static void registerEvents( ) {
+
 		}
 	}
 }

@@ -8,17 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 using KSPGAClient.Events;
 
 namespace KSPGAClient {
 	public partial class Form1 : Form {
 
-		public Form1(  ) {
-			
+		public Form1( ) {
+
 			InitializeComponent( );
 		}
 
-		private void updateConnStatus( object sender, ConnectionStatusUpdateEventArgs e ) {
+		public void updateConnStatus( object sender, ConnectionStatusUpdateEventArgs e ) {
 			switch ( e.Status ) {
 				case CONNECTIONSTATUS.CONNECTED:
 					ts_TelnetStatus.ForeColor = Color.Green;
